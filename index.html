@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Дамочка — будете моим партнёром?</title>
-  <meta name="description" content="Интерактивный одностраничный сайт: "Дамочка, а вы будете моим партнёром?" — готов для GitHub Pages." />
+  <title>Золотко — будешь моим партнёром?</title>
+  <meta name="description" content="Интерактивный одностраничный сайт: "Золотко, а ты будешь моим партнёром?" — готов для GitHub Pages." />
   <style>
     :root{
       --bg1:#FFDEE9;
@@ -41,15 +41,14 @@
 <body>
   <main class="card" role="main">
     <section class="hero">
-      <h1>Дамочка — короткий интерактив</h1>
-      <p class="lead">Главный вопрос на странице — <span class="phrase">«Дамочка, а вы будете моим партнёром?»</span></p>
+      <h1>Золотко — короткий интерактив</h1>
+      <p class="lead">Главный вопрос — <span class="phrase">«Золотко, а ты будешь моим партнёром?»</span></p>
       <div class="controls" aria-hidden="false">
         <button class="btn btn-yes" id="btnYes">Да, конечно ❤️</button>
         <button class="btn btn-no" id="btnNo">Нет, спасибо</button>
-        <button class="btn" id="btnCopy">Скопировать ссылку</button>
       </div>
-      <p class="small">Канал взаимодействия — модальные всплывающие окна и анимация сердца.</p>
-      <footer>Сайт готов к публикации на GitHub Pages — просто положите этот файл как <code>index.html</code> в репозиторий.</footer>
+      <p class="small">А вы знали что я так могу.</p>
+      <footer>Небольшой сайт, но дальше больше!</footer>
     </section>
 
     <aside class="preview">
@@ -92,15 +91,15 @@
 
     btnYes.addEventListener('click', ()=>{
       heart.classList.add('pulse');
-      result.textContent = 'Ура! Она согласилась ❤️';
-      openModal('Отлично!','Похоже, девушка согласна стать вашим партнёром. Удачи!');
+      result.textContent = 'Правильный ответ ❤️';
+      openModal('Окак','Тэди в сумке скачет от радости, прямо как я');
       setTimeout(()=>heart.classList.remove('pulse'),900);
     });
 
     btnNo.addEventListener('click', ()=>{
       heart.classList.add('pulse');
-      result.textContent = 'Эх... не в этот раз — остаёмся друзьями.';
-      openModal('Ну что ж','Иногда ответ — это тоже ответ. Не переживайте.');
+      result.textContent = 'А, ты хорошо подумала?';
+      openModal('Неправильный ответ');
       setTimeout(()=>heart.classList.remove('pulse'),900);
     });
 
